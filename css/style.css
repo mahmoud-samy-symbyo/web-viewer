@@ -1,13 +1,11 @@
 /* fonts */
-/*
 @font-face {
   font-family: Hamburger;
-  src: url(../font/Hamburger.ttf);
+  src: url(../fonts/Hamburger.ttf);
 }
-*/
 
 /* base styles */
-/*
+
 html {
   font-family: "Hamburger", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 24px;
@@ -17,63 +15,41 @@ html {
   text-align: center;
   background: #113;
   background: linear-gradient(45deg, #113, #101);
-}*/
+}
 
 body {
-	font-family: Monospace;
-	background-color: #E0E0E0;
-	margin: 0px;
-	overflow: hidden;
+  margin: 0;
 }
 
-#info {
-	color: #fff;
-	position: absolute;
-	top: 10px;
-	width: 100%;
-	text-align: center;
-	z-index: 100;
-	display:block;
+h1 {
+  font-size: 70px;
 }
 
-a { color: skyblue }
-.button { background:#999; color:#eee; padding:0.2em 0.5em; cursor:pointer }
-.highlight { background:orange; color:#fff; }
+p {
+  margin: 0 0 10px 0;
+}
 
-/*
 #container {
   padding-left: 300px;
   padding-right: 300px;
   padding-bottom: 200px;
 }
 
-
-#container {
-  padding-left: 3px;
-  padding-right: 3px;
-  padding-bottom: 2px;
-  padding-top: 2px;
-}
-
 /* threejs container styles */
-/*
 #example-container {
   background:#111;
   margin: 20px auto;
   padding: 20px;
   min-height: 300px;
 }
-*/
-/*
+
 #threejs-container {
   position: relative;
   background:#000;
   color: #666;
   text-align: center;
-  padding-left: 3px;
-  padding-right: 3px;
-  padding-bottom: 2px;
-  padding-top: 2px;
+  padding: 50% 0 0 0;
+  height: 0;
 }
 
 #threejs-container canvas {
@@ -83,4 +59,3 @@ a { color: skyblue }
   right: 0px;
   bottom: 0px;
 }
-*/

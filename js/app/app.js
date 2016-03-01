@@ -10,16 +10,12 @@ function ( THREE, camera, controls, stlModelLoader, light, material, renderer, s
         mesh.position.set( 0, 0, 0 );
         mesh.rotation.set( - Math.PI/2 , 0, 0 );
         //mesh.scale.set( 0.005, 0.005, 0.005 );
-        
         scene.add( mesh );
       } );
-      //app.animate();
-      //controls.addEventListener( 'change', app.animate );
     },
 
     animate: function () {
       requestAnimationFrame( app.animate );
-      //window.requestAnimationFrame( app.animate );
       controls.update();
       statistics.update();
       renderer.render( scene, camera );

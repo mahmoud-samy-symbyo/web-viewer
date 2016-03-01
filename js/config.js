@@ -12,7 +12,8 @@ var require = {
     "CanvasRenderer": { deps: ['threeCore'], exports: 'THREE' },
     // --- end THREE sub-components
     'detector': { exports: 'Detector' },
-    'stats': { exports: 'Stats' }
+    'stats': { exports: 'Stats' },
+    'bootstrap': { deps: ['jquery'] }
   },
   // Third party code lives in js/lib
   paths: {
@@ -30,6 +31,9 @@ var require = {
     text: '../lib/text',
     shader: '../lib/shader',
     // Where to look for shader files
-    shaders: '../shaders'
+    shaders: '../shaders',
+    // bootstrap & jquery
+    bootstrap: ["//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min", "../lib/bootstrap.min"],
+    jquery: ["//code.jquery.com/jquery-2.2.1.min", "../lib/jquery-2.2.1.min"]
   }
 };
