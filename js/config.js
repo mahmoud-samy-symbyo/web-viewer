@@ -9,7 +9,10 @@ var require = {
     'STLLoader': { deps: ['threeCore'], exports: 'THREE' },
     'PLYLoader': { deps: ['threeCore'], exports: 'THREE' },
     'OBJLoader': { deps: ['threeCore'], exports: 'THREE' },
-    "CanvasRenderer": { deps: ['threeCore'], exports: 'THREE' },
+    'Projector': { deps: ['threeCore'], exports: 'THREE' },
+    'CanvasRenderer': { deps: ['Projector'], exports: 'THREE.CanvasRenderer' },
+    'SVGRenderer': { deps: ['CanvasRenderer'], exports: 'THREE' },
+    'CSS3DRenderer': { deps: ['threeCore'], exports: 'THREE' },
     // --- end THREE sub-components
     'detector': { exports: 'Detector' },
     'stats': { exports: 'Stats' },
@@ -24,6 +27,10 @@ var require = {
     STLLoader: '../lib/loaders/STLLoader',
     PLYLoader: '../lib/loaders/PLYLoader',
     OBJLoader: '../lib/loaders/OBJLoader',
+    Projector: '../lib/renderers/Projector',
+    CanvasRenderer: '../lib/renderers/CanvasRenderer',
+    SVGRenderer: '../lib/renderers/SVGRenderer',
+    CSS3DRenderer: '../lib/renderers/CSS3DRenderer',
     // --- end THREE sub-components
     detector: '../lib/Detector',
     stats: '../lib/stats.min',

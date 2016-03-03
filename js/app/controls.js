@@ -1,6 +1,6 @@
 define( ["three", "camera", "container", "TrackballControls"], function( THREE, camera, container ) {
 
-	var controls = new THREE.TrackballControls( camera, container );
+	var controls = new THREE.TrackballControls( camera );
 	controls.rotateSpeed = 1.0;
 	controls.zoomSpeed = 1.2;
 	controls.panSpeed = 0.8;
