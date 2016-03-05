@@ -2,12 +2,8 @@ define( ["appConfig", "three", "camera", "controls", "stlModelLoader", "light", 
   function ( appConfig, THREE, camera, controls, stlModelLoader, light, material, renderer, scene, statistics ) {
     var app = {
       init: function () {
-        //scene.add( new THREE.GridHelper( 200, 20 ) );
-        //app.axis = new THREE.AxisHelper(75);
-        //scene.add(app.axis);
-        //app.helper = new THREE.BoundingBoxHelper(mesh, 0xff0000);
-        //app.helper.update();
-        //scene.add(app.helper);
+        //scene.add( new THREE.GridHelper( 200, 10 ) );
+        //scene.add(new THREE.AxisHelper(1000));
 
         stlModelLoader.load( 'orders/62692.stl', function ( geometry ) {
           var mesh = new THREE.Mesh( geometry, material.phong );
