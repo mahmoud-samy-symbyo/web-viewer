@@ -1,11 +1,7 @@
 Known issues:
-- AutoRefresh at the start
-- Loading message
+- FPS control
 
 TODO:
-- Controlls Hud
-- Draggers
-- Auto Center after loading
-- Model loading
-- Main layout
-- Bounding Box: http://stackoverflow.com/questions/15492857/any-way-to-get-a-bounding-box-from-a-three-js-object3d
+- Application loading
+- change appConfig.viewSize based on bbox.size().length();
+- Dynamic appConfig

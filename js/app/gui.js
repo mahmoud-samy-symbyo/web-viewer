@@ -1,15 +1,11 @@
-define( [], function(dat) {
+define( ["datgui", "appConfig"], function( dat, appConfig ) {
+	var gui = new dat.GUI();
+  var viewSizeChanged = gui.add(appConfig, 'viewSize', 50, 250).listen();
 
-}
-/*
-	["datgui"], function( dat ) {
-	var Options = function() {
-	  this.rotate    = function() { console.log('rotate'); };
-	  this.translate = function() { console.log('translate'); };
-	};
-
-	var options = new Options();
-  var gui = new dat.GUI();
-  gui.add(options, 'rotate');
-  gui.add(options, 'translate');*/
+	viewSizeChanged.onFinishChange(function (){
+		// TODO: fix for Internet Explorer
+		var ev = new CustomEvent('resize');
+		ev.initEvent('resize');
+		window.dispatchEvent(ev);
+	});
 } );

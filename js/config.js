@@ -16,20 +16,20 @@ var require = {
   },
   // Third party code lives in js/lib
   paths: {
-    three: '../lib/three.config',
-    threeCore: '../lib/three',
-    TrackballControls: '../lib/controls/TrackballControls',
-    OrbitControls: '../lib/controls/OrbitControls',
-    TransformControls: '../lib/controls/TransformControls',
-    STLLoader: '../lib/loaders/STLLoader',
-    PLYLoader: '../lib/loaders/PLYLoader',
-    OBJLoader: '../lib/loaders/OBJLoader',
-    detector: '../lib/Detector',
-    stats: '../lib/stats.min',
-    datgui: '../lib/dat.gui.min',
-    text: '../lib/text',
-    shader: '../lib/shader',
+    three: '../libs/three.config',
+    threeCore: '../libs/three',
+    TrackballControls: '../libs/controls/TrackballControls',
+    OrbitControls: '../libs/controls/OrbitControls',
+    TransformControls: '../libs/controls/TransformControls',
+    STLLoader: '../libs/loaders/STLLoader',
+    PLYLoader: '../libs/loaders/PLYLoader',
+    OBJLoader: '../libs/loaders/OBJLoader',
+    detector: '../libs/Detector',
+    stats: '../libs/stats.min',
+    datgui: '../libs/dat.gui.min',
+    text: '../libs/text',
+    shader: '../libs/shader',
     shaders: '../shaders',
-    jquery: ["//code.jquery.com/jquery-2.2.1.min", "../lib/jquery-2.2.1.min"]
+    jquery: ["//code.jquery.com/jquery-1.12.1.min", "../libs/jquery-1.12.1.min"]
   }
 };
