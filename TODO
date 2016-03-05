@@ -8,3 +8,4 @@ TODO:
 - Auto Center after loading
 - Model loading
 - Main layout
+- Bounding Box: http://stackoverflow.com/questions/15492857/any-way-to-get-a-bounding-box-from-a-three-js-object3d
