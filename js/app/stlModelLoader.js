@@ -1,4 +1,4 @@
-define( ["three", "STLLoader"], function ( THREE ) {
-	var stlLoader = new THREE.STLLoader();
+define( ["three", "loadingManager", "STLLoader"], function ( THREE, loadingManager ) {
+	var stlLoader = new THREE.STLLoader(loadingManager);
 	return stlLoader;
 } );
