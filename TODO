@@ -1,7 +1,5 @@
-Known issues:
-- FPS control
-
 TODO:
+- fix: containers (scene, app)
 - Application loading
 - change appConfig.viewSize based on bbox.size().length();
 - Dynamic appConfig
