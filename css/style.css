@@ -1,75 +1,33 @@
-/* fonts */
-@font-face {
-  font-family: Hamburger;
-  src: url(../fonts/Hamburger.ttf);
-}
-
 html {
-/*  font-family: "Hamburger", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 24px;
-  line-height: 1.2;
-  color: #fed;
-  text-shadow: black 5px 5px;
-  text-align: center;
-*/
-  background: #113;
-  background: linear-gradient(45deg, #113, #101);
+  background: #000;
 }
 
 body {
   margin: 0;
 }
 
-h1 {
-  font-size: 70px;
-}
-
-p {
-  margin: 0 0 10px 0;
-}
-
 #container {
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  background:#f11;
-}
-
-/* threejs container styles
-#example-container {
-  background:#111;
-  margin: 20px auto;
-  padding: 20px;
-  min-height: 300px;
-}
-*/
-#threejs-container {
   position: relative;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
   background:#000;
-  color: #666;
-  text-align: center;
-  padding: 50% 0 0 0;
-  /*height: 0;*/
+  min-width: 400px;
 }
 
-#threejs-container canvas {
+#scene-container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: #000;
+}
+
+#scene-container canvas {
   position: absolute;
   left: 0px;
   top: 0px;
   right: 0px;
   bottom: 0px;
-}
-
-#vToolbar{
-  display:none;
-}
-@media only screen
-and (min-width : 600px) {
-  #vToolbar{
-      display:block;
-  }
-  #hToolbar{
-      display:none;
-  }
 }

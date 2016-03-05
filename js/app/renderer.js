@@ -1,7 +1,7 @@
 define( ["three", "container", "controls"], function ( THREE, container, controls ) {
 
   //container.innerHTML = "";
-  var renderer = new THREE.WebGLRenderer( { antialias: true } );
+  var renderer = new THREE.WebGLRenderer( { antialias: false } );
 
   renderer.setClearColor( 0x9F9F9F );
   if (window.devicePixelRatio) {

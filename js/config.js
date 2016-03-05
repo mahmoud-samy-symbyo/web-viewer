@@ -1,46 +1,35 @@
 // Configure Require.js
 var require = {
-  // Default load path for js files
   baseUrl: 'js/app',
   shim: {
-    // --- Use shim to mix together all THREE.js subcomponents
     'threeCore': { exports: 'THREE' },
     'TrackballControls': { deps: ['threeCore'], exports: 'THREE' },
+    'OrbitControls': { deps: ['threeCore'], exports: 'TREE' },
+    'TransformControls': { deps: ['threeCore'], exports: 'TREE' },
     'STLLoader': { deps: ['threeCore'], exports: 'THREE' },
     'PLYLoader': { deps: ['threeCore'], exports: 'THREE' },
     'OBJLoader': { deps: ['threeCore'], exports: 'THREE' },
     'Projector': { deps: ['threeCore'], exports: 'THREE' },
-    'CanvasRenderer': { deps: ['Projector'], exports: 'THREE.CanvasRenderer' },
-    'SVGRenderer': { deps: ['CanvasRenderer'], exports: 'THREE' },
-    'CSS3DRenderer': { deps: ['threeCore'], exports: 'THREE' },
-    // --- end THREE sub-components
     'detector': { exports: 'Detector' },
     'stats': { exports: 'Stats' },
-    'bootstrap': { deps: ['jquery'] }
+    'datgui': { exports: 'dat' }
   },
   // Third party code lives in js/lib
   paths: {
-    // --- start THREE sub-components
     three: '../lib/three.config',
-    threeCore: '../lib/three.min',
+    threeCore: '../lib/three',
     TrackballControls: '../lib/controls/TrackballControls',
+    OrbitControls: '../lib/controls/OrbitControls',
+    TransformControls: '../lib/controls/TransformControls',
     STLLoader: '../lib/loaders/STLLoader',
     PLYLoader: '../lib/loaders/PLYLoader',
     OBJLoader: '../lib/loaders/OBJLoader',
-    Projector: '../lib/renderers/Projector',
-    CanvasRenderer: '../lib/renderers/CanvasRenderer',
-    SVGRenderer: '../lib/renderers/SVGRenderer',
-    CSS3DRenderer: '../lib/renderers/CSS3DRenderer',
-    // --- end THREE sub-components
     detector: '../lib/Detector',
     stats: '../lib/stats.min',
-    // Require.js plugins
+    datgui: '../lib/dat.gui.min',
     text: '../lib/text',
     shader: '../lib/shader',
-    // Where to look for shader files
     shaders: '../shaders',
-    // bootstrap & jquery
-    bootstrap: ["//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min", "../lib/bootstrap.min"],
     jquery: ["//code.jquery.com/jquery-2.2.1.min", "../lib/jquery-2.2.1.min"]
   }
 };
