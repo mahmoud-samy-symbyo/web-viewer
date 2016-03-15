@@ -1,5 +1,5 @@
 define( ["three", "scene"], function ( THREE, scene ) {
-  var textMesh = undefined;
+  var textMesh;
   var fontLoader = new THREE.FontLoader();
   fontLoader.load( 'js/fonts/helvetiker_bold.typeface.js', function ( font ) {
     var materialFront = new THREE.MeshBasicMaterial( { color: 0xffffff } );

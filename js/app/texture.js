@@ -3,4 +3,5 @@ define( ["three"], function ( THREE ) {
   return {
     grass: THREE.ImageUtils.loadTexture( texturePath + "grass.png" )
   };
+
 } );

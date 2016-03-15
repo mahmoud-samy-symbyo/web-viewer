@@ -1,5 +1,5 @@
-define(    ["appConfig","three","camera","meshHelpers","controls","stlModelLoader","light","material","renderer","scene","statistics"],
-  function ( appConfig , THREE , camera , meshHelpers , controls , stlReader      , light , material , renderer , scene , statistics ) {
+define(    ["appConfig","three","camera","meshHelpers","controls","stlReader","material","renderer","scene","statistics"],
+  function ( appConfig , THREE , camera , meshHelpers , controls , stlReader , material , renderer , scene , statistics ) {
     var app = {
         init: function () {
           //scene.add( new THREE.GridHelper( 200, 10 ) );

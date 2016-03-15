@@ -9,10 +9,10 @@ define( ["three"], function ( THREE ) {
      mesh.translateX( -center.x );
      mesh.translateY( -center.y );
      mesh.translateZ( -center.z );
-     
+
      //controls.attach( mesh );
      //scene.add( controls );
-   }
+   };
 
    return {
      pointTo: pointTo
