@@ -21,11 +21,11 @@ define( ["appConfig", "three", "camera", "controls", "stlModelLoader", "light", 
         } );
       },
 
-      animate: function () {
-        requestAnimationFrame( app.animate );
+      render: function () {
         controls.update();
         statistics.update();
         renderer.render( scene, camera );
+        requestAnimationFrame( app.render );
       }
     };
     return app;
