@@ -3,14 +3,14 @@ define( ["three", "scene"], function ( THREE, scene ) {
   var fontLoader = new THREE.FontLoader();
   fontLoader.load( 'js/fonts/helvetiker_bold.typeface.js', function ( font ) {
     var materialFront = new THREE.MeshBasicMaterial( { color: 0xffffff } );
-    var materialSide = new THREE.MeshBasicMaterial( { color: 0x000088 } );
+    var materialSide = new THREE.MeshBasicMaterial( { color: 0x000000 } );
     var materialArray = [ materialFront, materialSide ];
     var textGeom = new THREE.TextGeometry( "Loading ...", {
       font: font, size: 10
     });
 
     var textMaterial = new THREE.MeshFaceMaterial(materialArray);
-    textMesh = new THREE.Mesh(textGeom, textMaterial );
+    textMesh = new THREE.Mesh( textGeom, textMaterial );
 
     textGeom.computeBoundingBox();
     var textWidth = textGeom.boundingBox.max.x - textGeom.boundingBox.min.x;
