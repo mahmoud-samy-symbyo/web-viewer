@@ -1,4 +1,5 @@
-define( ["three", "container", "appConfig"], function ( THREE, container, appConfig ) {
+define ( ["three","container","appConfig","meshesManager"],
+function ( THREE , container , appConfig , meshesManager ) {
 	var camera;
 
 	if (appConfig.useOrthoCamera) {
@@ -12,7 +13,7 @@ define( ["three", "container", "appConfig"], function ( THREE, container, appCon
 	var updateSize = function () {
 		if (appConfig.useOrthoCamera) {
 	    var width = container.offsetWidth, height = container.offsetHeight;
-	    var viewSize = appConfig.viewSize;
+	    var viewSize = meshesManager.getViewSize('mainMesh');
 	    var aspectRatio = width/height;
 	    camera.left  = -aspectRatio * viewSize / 2;
 	    camera.right =  aspectRatio * viewSize / 2;

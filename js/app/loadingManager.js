@@ -2,8 +2,11 @@ define( ["jquery", "three"], function ( $, THREE ) {
   var loadingManager = new THREE.LoadingManager();
   loadingManager.onLoad = function ( ) {
     setTimeout(function(){
+      var ev = new CustomEvent('resize');
+      ev.initEvent('resize');
+      window.dispatchEvent(ev);
       $(".loader").fadeOut("slow");
-    }, 3000);
+    }, 500);
   };
   loadingManager.onProgress = function ( item, loaded, total ) {
   };

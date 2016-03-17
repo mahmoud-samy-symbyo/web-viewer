@@ -1,14 +1,11 @@
-define(    ["appConfig","three","camera","meshHelpers","controls","stlReader","material","light","renderer","scene","statistics"],
-  function ( appConfig , THREE , camera , meshHelpers , controls , stlReader , material , light , renderer , scene , statistics ) {
+define(    ["appConfig","three","camera","controls","light","renderer","scene","statistics","material","meshesManager","distanceTool","gui"],
+  function ( appConfig , THREE , camera , controls , light , renderer , scene , statistics , material , meshesManager , distanceTool , gui) {
     var app = {
+
         init: function () {
-          stlReader('orders/62692.stl').then(function ( geometry ) {
-            var mesh = new THREE.Mesh( geometry, material.phong );
-            meshHelpers.pointTo(mesh);
-            scene.add( mesh );
-          }).catch( function(e){
-            console.log(e);
-          });
+          meshesManager.loadStlMesh('orders/62692.stl', material.phong, true, "mainMesh").then(function(mesh){
+            scene.add(mesh);
+          }).catch(function(error){console.log(error);});
           //scene.add( new THREE.GridHelper( 200, 10 ) );
           //scene.add(new THREE.AxisHelper(1000));
         },

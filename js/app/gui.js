@@ -1,11 +1,11 @@
-define( ["datgui", "appConfig"], function( dat, appConfig ) {
+define( ["datgui","appConfig", "meshesManager"],
+function( dat    , appConfig ,  meshesManager ) {
 	var gui = new dat.GUI();
-  var viewSizeChanged = gui.add(appConfig, 'viewSize', 50, 250).listen();
 
-	viewSizeChanged.onFinishChange(function (){
-		// TODO: fix for Internet Explorer
-		var ev = new CustomEvent('resize');
-		ev.initEvent('resize');
-		window.dispatchEvent(ev);
-	});
+	controller = gui.add(appConfig, 'mode', [ 'Move', 'Measure' ] );
+	/*controller.onChange(function(value) {
+	  // Fires on every change, drag, keypress, etc.
+	});*/
+
+	return gui;
 } );
