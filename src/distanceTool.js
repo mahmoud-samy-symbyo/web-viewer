@@ -8,7 +8,7 @@ function( THREE , cameraManager , scene , meshHelper , renderer ){
   var pointB = new THREE.Vector3();
   var markerA = new THREE.Mesh(
     new THREE.SphereGeometry( 0.1, 16, 16 ),
-    new THREE.MeshBasicMaterial( { color: 0x5555FF, depthTest: false, depthWrite: false } ) );
+    new THREE.MeshBasicMaterial( { color: 0x5555FF, /*depthTest: false, depthWrite: false*/ } ) );
   var markerB = markerA.clone();
   scene.add( markerA );
   scene.add( markerB );
@@ -19,8 +19,8 @@ function( THREE , cameraManager , scene , meshHelper , renderer ){
     geometry.vertices.push( vectorB );
     var material = new THREE.LineBasicMaterial({
       color: 0x5555FF,
-      depthWrite: false,
-      depthTest: false
+      //depthWrite: false,
+      //depthTest: false
     });
     line = new THREE.Line( geometry, material );
     return line;

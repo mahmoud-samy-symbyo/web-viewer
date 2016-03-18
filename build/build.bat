@@ -1,2 +1,1 @@
-node %~dp0r.js -o %~dp0build_release.js
-node %~dp0r.js -o %~dp0build_debug.js
+node %~dp0r.js -o %~dp0build.js out="dist/webviewer.min.js"
