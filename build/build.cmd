@@ -1,1 +1,0 @@
-node %~dp0r.js -o %~dp0buildConfig.js

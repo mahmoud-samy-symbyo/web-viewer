@@ -1,6 +1,6 @@
 // Start the app
 require( ['detector', 'app', 'container'], function ( Detector, app, container ) {
-  if ( ! Detector.webgl ) {
+  if ( !!! Detector.webgl ) {
     Detector.addGetWebGLMessage();
     //TODO: container.innerHTML = "";
   }

@@ -1,6 +1,6 @@
 // Configure Require.js
 var require = {
-  baseUrl: 'js/app',
+  baseUrl: '../src/viewer',
   shim: {
     'threeCore': { exports: 'THREE' },
     'TrackballControls': { deps: ['threeCore'], exports: 'THREE' },
@@ -30,7 +30,7 @@ var require = {
     text: '../libs/text',
     shader: '../libs/shader',
     shaders: '../shaders',
-    jquery: ["//code.jquery.com/jquery-1.12.1.min", "../libs/jquery-1.12.1.min"],
+    jquery: "../libs/jquery-1.12.1.min",
     rsvp: '../libs/rsvp-latest.min'
   }
 };
