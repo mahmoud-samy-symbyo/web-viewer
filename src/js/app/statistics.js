@@ -4,6 +4,5 @@ define( ["stats"], function (Stats) {
 	stats.domElement.style.position = 'absolute';
 	stats.domElement.style.buttom = '0px';
 	container.appendChild( stats.domElement );
-
 	return stats;
 } );

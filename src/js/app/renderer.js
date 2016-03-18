@@ -1,4 +1,5 @@
-define( ["three", "container", "controls"], function ( THREE, container, controls ) {
+define ( ["three","container"],
+function ( THREE , container ) {
   var renderer = new THREE.WebGLRenderer( { antialias: true } );
   //renderer.sortObjects = false;
   //renderer.autoClear = true;

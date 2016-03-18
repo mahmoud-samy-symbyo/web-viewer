@@ -1,5 +1,5 @@
-define( ["three","camera","scene","meshesManager","renderer"],
-function( THREE , camera , scene , meshesManager , renderer ){
+define( ["three","cameraManager","scene","meshHelper","renderer"],
+function( THREE , cameraManager , scene , meshHelper , renderer ){
   // Measurement Code
   var line;
   var mouse = new THREE.Vector2();
@@ -26,11 +26,11 @@ function( THREE , camera , scene , meshesManager , renderer ){
     return line;
   }
 
-  function onMouseUp( event ) {
+  function onMouseClick( event ) {
     mouse.x =   ( event.clientX / renderer.domElement.width  ) * 2 - 1;
     mouse.y = - ( event.clientY / renderer.domElement.height ) * 2 + 1;
-    raycaster.setFromCamera( mouse, camera );
-    var model = meshesManager.getMesh('mainMesh');
+    raycaster.setFromCamera( mouse, cameraManager.camera );
+    var model = meshHelper.getMesh('jaw');
     var intersects = raycaster.intersectObjects( [model], true );
 
     if( intersects.length > 0 ){
@@ -56,5 +56,5 @@ function( THREE , camera , scene , meshesManager , renderer ){
       }
     }
   }
-  window.addEventListener( 'mouseup', onMouseUp, false );
+  window.addEventListener( 'click', onMouseClick, false );
 } );
