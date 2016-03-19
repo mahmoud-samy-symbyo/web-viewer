@@ -1,0 +1,21 @@
+{
+  "name": "webviewer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/server.js",
+  "dependencies": {
+    "connect": "^3.4.1",
+    "serve-static": "^1.10.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@msamy.github.com:mahmoud-samy/3d-viewer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
