@@ -9,9 +9,9 @@ function ( THREE , container ) {
 
 	var updateViewSize = function(newViewSize) {
 		viewSize = newViewSize;
-    var ev = new CustomEvent('resize');
-    ev.initEvent('resize');
-    window.dispatchEvent(ev);
+		var evt = document.createEvent('UIEvents');
+		evt.initUIEvent('resize', true, false,window,0);
+		window.dispatchEvent(evt);
 	};
 
 	var updateSize = function () {

@@ -24,7 +24,10 @@ function ( $      , RSVP , THREE , require , STLLoader ) {
 			stlLoader.load(
         url,
         function ( geometry ) { resolve(geometry); },
-        function ( progress ) { console.log(progress);},
+        function ( progress ) {
+            var percent = (progress.loaded / progress.total * 100);
+            console.log(percent.toFixed(2));
+        },
         function ( error    ) { reject(error);}
       );
 	  });
